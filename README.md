@@ -116,3 +116,17 @@ The `plots/` folder contains visualizations of the experiments conducted, which 
 ## Extending the Framework
 
 You can add more datasets by extending the `read_dataset.py` file and creating corresponding `download_dataset_<dataset>.py` scripts if required. Ensure the data is formatted as vectors for compatibility with the experiment functions.
+
+## Citations
+
+If you use this code or reference any of the included datasets or methods, please cite the following papers:
+
+- Malkov, Y. A., & Yashunin, D. A. (2020). Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs. *IEEE Transactions on Pattern Analysis and Machine Intelligence*. [https://doi.org/10.1109/TPAMI.2018.2889473].
+  
+- Wolf, L., Hassner, T., & Maoz, I. (2011). Face Recognition in Unconstrained Videos with Matched Background Similarity. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*.
+
+- Jégou, H., Douze, M., & Schmid, C. (2011). Product Quantization for Nearest Neighbor Search. *IEEE Transactions on Pattern Analysis and Machine Intelligence*.
+
+- Pennington, J., Socher, R., & Manning, C. D. (2014). GloVe: Global Vectors for Word Representation. In *Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)*.
+
+- Babenko, A., & Lempitsky, V. (2016). Efficient Indexing of Billion-Scale Datasets of Deep Descriptors. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*.
