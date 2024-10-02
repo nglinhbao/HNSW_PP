@@ -130,9 +130,19 @@ def SearchLayer(HNSW: dict, layer_i: int, q: int, ep: int, ef: int, world: int, 
     if exclude_set and ep in exclude_set:
         # Find a new entry point that's not in exclude_set
         possible_eps = set()
-        for node in layer:
-            if node not in exclude_set:
-                possible_eps.add(node)
+        visited = set()
+        to_visit = {ep}
+        
+        while to_visit and not possible_eps:
+            current = to_visit.pop()
+            visited.add(current)
+            neighbors = Neighborhood(layer, current)
+            
+            for neighbor in neighbors:
+                if neighbor not in exclude_set and neighbor not in visited:
+                    possible_eps.add(neighbor)
+                if neighbor not in visited:
+                    to_visit.add(neighbor)
         
         if not possible_eps:
             return set(), False  # Return empty set if no valid entry points
